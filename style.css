@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* default colors and font for the whole portfolio */
+/* note: if need to change something: ex.color or bg-color change in root  */
+:root {
+  /* fonts */
+  --primary-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+
+  /* colors */
+  --background-color: #212830;
+  --primary-text-color: #d1d7e0;
+  --secondary-text-color: #478be6;
+
+  /* font size */
+  --sm: 12px;
+  --base: 16px;
+  --md: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: var(--primary-font);
+  color: var(--primary-text-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 0 minmax(0, calc(100% - 256px - 16px));
+  grid-auto-flow: column;
+  width: 100%;
+  margin: 16px;
+}
+
+.profile-container {
+  width: 256px;
+  grid-column: span 1;
+}
+
+.image-container {
+  width: 256px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 256px;
+  height: 256px;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--background-color);
+}
+
+.repo-container {
+  width: 585px;
+  grid-column: span 2;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.main-prof-content {
+  display: block;
+  margin-top: 1rem;
+}
