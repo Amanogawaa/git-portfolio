@@ -1,0 +1,150 @@
+/* default colors and font for the whole portfolio */
+/* note: if need to change something: ex.color or bg-color change in root  */
+/* :root {
+  --primary-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+
+  --background-color: #212830;
+  --primary-text-color: #d1d7e0;
+  --secondary-text-color: #478be6;
+} */
+/* 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: var(--primary-font);
+  color: var(--primary-text-color);
+}
+
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns: auto 0 minmax(0, calc(100% - 296px - 16px));
+  grid-auto-flow: column;
+  width: 100%;
+  margin: 2.5rem;
+}
+
+.profile-container {
+  width: 296px;
+  grid-column: span 1;
+}
+
+.image-container {
+  width: 296px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 296px;
+  height: 296px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 260/260 auto;
+  border-radius: 50%;
+}
+
+.main-prof-content,
+.sub-prof-content {
+  display: flex;
+  width: 100%;
+  max-width: 296px;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.nickname {
+  display: block;
+  font-weight: 600;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 24px;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  margin-bottom: 2.5px;
+}
+
+.username {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+
+.bio {
+  width: 100%;
+  display: block;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 15.5px;
+  line-height: 24px;
+  text-size-adjust: 100%;
+  margin: 0.7rem 0;
+}
+
+.download-resume {
+  width: 100%;
+  color: var(--primary-text-color);
+  background-color: #2a313c;
+  border: 1px solid #3d444d;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 500;
+}
+
+.download-resume:hover {
+  background-color: #3d444d;
+}
+
+.followers-count,
+.location-container,
+.email-container {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  display: block;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-size-adjust: 100%;
+}
+
+.followers-count svg,
+.location-container svg,
+.email-container svg {
+  width: 15px;
+  height: 15px;
+}
+
+.repo-container {
+  width: 100%;
+  max-width: 1000px;
+  grid-column: span 2;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.readMe-container {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #3d444d;
+} */
