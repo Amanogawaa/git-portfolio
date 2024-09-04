@@ -6,26 +6,41 @@
     <title>Serenity | Dominic Molino</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#212830] w-full text-[#d1d7e0] font-mono">
+  <body class="bg-[#212830] w-full text-[#d1d7e0] font-[Inter] h-screen">
     <main class="w-[1200px] mx-auto">
       <div
-        class="relative grid grid-cols-[auto min-content minmax(0, calc(100% - 296px - 16px))] grid-flow-col w-full m-10"
+        class="relative flex flex-col md:flex-row w-full items-center m-8 gap-2"
       >
-        <section>
-          <div>
-            <img src="./../assets/images/download.png" alt="profile" />
+        <!-- profile section? -->
+        <section class="w-[296px] flex-grow self-stretch">
+          <div
+            class="w-[296px] h-[296px] block border border-[#d1d7e0] rounded-full"
+          >
+            <img
+              class="pfpimage w-[296px] h-[296px] object-cover object-center rounded-full"
+              src=""
+              alt="profile"
+            />
           </div>
-          <div>
-            <div>
-              <h1>senerity</h1>
-              <h5>Amanogawaa</h5>
-              <p>hello, im dominic and im a future farmer</p>
+          <div class="flex flex-col mt-5 gap-1">
+            <div class="flex flex-col w-full max-w-[296px]">
+              <h1
+                class="nickname block font-bold text-2xl overflow-ellipsis"
+              ></h1>
+              <h5
+                class="username `block font-normal text-2xl overflow-ellipsis"
+              ></h5>
+              <p class="bio block font-thin text-[15px] text-wrap mt-2.5"></p>
             </div>
-            <div>
-              <button>Download Resume</button>
+            <div class="w-full my-5">
+              <button
+                class="cursor-pointer bg-[#2a313c] border border-[#6b6c6e] w-full rounded-md py-2 px-4 hover:opacity-85"
+              >
+                Download Resume
+              </button>
             </div>
-            <div>
-              <div>
+            <div class="flex flex-col w-full max-w-[296px]">
+              <div class="inline-flex items-center font-light">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -36,16 +51,17 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-users-round"
+                  class="lucide lucide-users-round w-4 h-4 me-1"
                 >
                   <path d="M18 21a8 8 0 0 0-16 0" />
                   <circle cx="10" cy="8" r="5" />
                   <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
                 </svg>
-                <span>8 followers</span> &#x2022;
-                <span>14 following</span>
+                <span class="followers text-base me-1"></span>
+                &#x2022;
+                <span class="following text-base ms-1"></span>
               </div>
-              <div>
+              <div class="inline-flex items-center font-light">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -56,16 +72,16 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-map-pin"
+                  class="lucide lucide-map-pin w-4 h-4 me-1"
                 >
                   <path
                     d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
                   />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Philippines</span>
+                <span class="location text-base"></span>
               </div>
-              <div>
+              <div class="inline-flex items-center font-light">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -76,17 +92,265 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-mail"
+                  class="lucide lucide-mail w-4 h-4 me-1"
                 >
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span>202210298@gordoncollege.edu.ph</span>
+                <span class="email text-base">dommolino28@gmail.com</span>
               </div>
             </div>
+            <hr class="h-px my-5 bg-gray-200 border-0" />
+          </div>
+        </section>
+
+        <!-- repo section? -->
+        <section
+          class="w-[calc(100% - 296px - 16px)] w-fullh-screen p-5 flex flex-col"
+        >
+          <code class="text-sm text-gray-200">Amanogawaa/README.md</code>
+          <div
+            class="border border-slate-400 w-full rounded-md h-40 mt-2.5 p-5"
+          >
+            <h1 class="text-xl text-wrap font-semibold">About me</h1>
+            <h1 class="text-xl text-wrap font-semibold">Nothing much</h1>
+          </div>
+          <div
+            class="border border-slate-400 w-full rounded-md h-40 mt-2.5 p-5"
+          >
+            <h1 class="text-xl text-wrap font-semibold">
+              Programming Languages and Frameworks I use:
+            </h1>
+            <div class="flex justify-center items-center w-full mt-2.5">
+              <div
+                class="icon-container w-14 h-14 flex items-center justify-center gap-2"
+              ></div>
+            </div>
+          </div>
+
+          <hr class="h-px my-5 bg-gray-200 border-0" />
+
+          <h1 class="mb-2 text-base font-medium">Pinned Repositories</h1>
+          <div class="w-full grid grid-cols-2 grid-rows-2 gap-2.5">
+            <div class="border border-slate-400 rounded-md p-3">
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    attendease
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap mt-2.5">
+                student event registration system and attendance system
+              </p>
+              <div class="block">
+                <span
+                  class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div class="border border-slate-400 rounded-md p-3">
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    attendease
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap mt-2.5">
+                student event registration system and attendance system
+              </p>
+              <div class="block">
+                <span
+                  class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div class="border border-slate-400 rounded-md p-3">
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    attendease
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap mt-2.5">
+                student event registration system and attendance system
+              </p>
+              <div class="block">
+                <span
+                  class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div class="border border-slate-400 rounded-md p-3">
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    attendease
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap mt-2.5">
+                student event registration system and attendance system
+              </p>
+              <div class="block">
+                <span
+                  class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col justify-center mt-3">
+            <h1 class="mb-2 text-base font-medium">All Repository</h1>
+            <ul role="list" class="divide-y divide-gray-100">
+              <li class="flex justify-between gap-x-6 py-5">
+                <div class="flex flex-col min-w-0 gap-x-4">
+                  <div class="inline-flex items-center">
+                    <span class="text-sm font-medium text-blue-500">
+                      attendease
+                    </span>
+                    <span
+                      class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                    >
+                      Public
+                    </span>
+                  </div>
+                  <div>
+                    <p class="block font-thin text-sm text-wrap mt-2.5">
+                      student event registration system and attendance system
+                    </p>
+                    <div class="block">
+                      <span
+                        class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                      >
+                      </span>
+                      <span class="font-thin text-xs">HTML</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="flex justify-between gap-x-6 py-5">
+                <div class="flex flex-col min-w-0 gap-x-4">
+                  <div class="inline-flex items-center">
+                    <span class="text-sm font-medium text-blue-500">
+                      attendease
+                    </span>
+                    <span
+                      class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                    >
+                      Public
+                    </span>
+                  </div>
+                  <div>
+                    <p class="block font-thin text-sm text-wrap mt-2.5">
+                      student event registration system and attendance system
+                    </p>
+                    <div class="block">
+                      <span
+                        class="bg-orange-500 text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                      >
+                      </span>
+                      <span class="font-thin text-xs">HTML</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
     </main>
+
+    <script src="./script/app.js"></script>
   </body>
 </html>
