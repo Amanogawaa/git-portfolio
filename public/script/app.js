@@ -53,6 +53,7 @@ const iconsTech = [
 ];
 
 const techUse = document.querySelector(".icon-container");
+const repositoryContainer = document.getElementById("repository-container");
 
 iconsTech.forEach((icon) => {
   const image = document.createElement("img");
@@ -79,15 +80,66 @@ fetch(`https://api.github.com/users/${userName}`)
   .catch((error) => console.error("Error fetching profile:", error));
 
 // user repositories
-fetch(`https://api.github.com/users/${username}/repos`)
+fetch(`https://api.github.com/users/${userName}/repos`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-    const reposList = document.getElementById("repositories");
-    data.forEach((repo) => {
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
-      reposList.appendChild(listItem);
+    const maxCharacter = 100;
+
+    data.forEach((repository) => {
+      const repoList = document.createElement("li");
+      repoList.className = "border border-slate-400 rounded-md p-3 list-none";
+      repoList.innerHTML = `
+         <div class="inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-book-marked w-4 me-1"
+                  >
+                    <path d="M10 2v8l3-3 3 3V2" />
+                    <path
+                      d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                    />
+                    <span class="text-sm font-medium text-blue-500">
+                    ${repository.name}
+                    </span>
+                    <span
+                      class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                    >
+                     ${repository.private ? "Private" : "Public"}
+                    </span>
+                  </svg>
+                </div>
+                <p class="block font-thin text-sm text-wrap my-2">
+                  ${
+                    truncateDescription(repository.description, maxCharacter) ||
+                    ""
+                  }                
+                </p>
+                <div class="block">
+                  <span
+                    class="bg-white text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                  >
+                  </span>
+                  <span class="font-thin text-xs">${
+                    repository.language || ""
+                  }</span>
+                </div>
+      `;
+
+      repositoryContainer.appendChild(repoList);
     });
   })
   .catch((error) => console.error("Error fetching repositories:", error));
+
+function truncateDescription(text, maxLength) {
+  return text && text.length > maxLength
+    ? `${text.substring(0, maxLength)} ...`
+    : text;
+}
