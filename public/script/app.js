@@ -62,81 +62,97 @@ iconsTech.forEach((icon) => {
   techUse.appendChild(image);
 });
 
-// gets data of user and display it
-fetch(`https://api.github.com/users/${userName}`)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    document.querySelector(".pfpimage").src = data.avatar_url;
-    document.querySelector(".username").textContent = data.login;
-    document.querySelector(".nickname").textContent = data.name;
-    document.querySelector(".bio").textContent = data.bio;
-    document.querySelector(".followers").textContent =
-      data.followers + " followers";
-    document.querySelector(".following").textContent =
-      data.following + " following";
-    document.querySelector(".location").textContent = data.location;
-  })
-  .catch((error) => console.error("Error fetching profile:", error));
+const languageColors = {
+  JavaScript: "#f1e05a",
+  Python: "#3572A5",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  Java: "#b07219",
+  PHP: "#4F5D95",
+  TypeScript: "#2b7489",
+};
 
-// user repositories
-fetch(`https://api.github.com/users/${userName}/repos`)
-  .then((response) => response.json())
-  .then((data) => {
-    const maxCharacter = 100;
+// // gets data of user and display it
+// fetch(`https://api.github.com/users/${userName}`)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     document.querySelector(".pfpimage").src = data.avatar_url;
+//     document.querySelector(".username").textContent = data.login;
+//     document.querySelector(".nickname").textContent = data.name;
+//     document.querySelector(".bio").textContent = data.bio;
+//     document.querySelector(".followers").textContent =
+//       data.followers + " followers";
+//     document.querySelector(".following").textContent =
+//       data.following + " following";
+//     document.querySelector(".location").textContent = data.location;
+//   })
+//   .catch((error) => console.error("Error fetching profile:", error));
 
-    data.forEach((repository) => {
-      const repoList = document.createElement("li");
-      repoList.className = "border border-slate-400 rounded-md p-3 list-none";
-      repoList.innerHTML = `
-         <div class="inline-flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-book-marked w-4 me-1"
-                  >
-                    <path d="M10 2v8l3-3 3 3V2" />
-                    <path
-                      d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
-                    />
-                    <span class="text-sm font-medium text-blue-500">
-                    ${repository.name}
-                    </span>
-                    <span
-                      class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
-                    >
-                     ${repository.private ? "Private" : "Public"}
-                    </span>
-                  </svg>
-                </div>
-                <p class="block font-thin text-sm text-wrap my-2">
-                  ${
-                    truncateDescription(repository.description, maxCharacter) ||
-                    ""
-                  }                
-                </p>
-                <div class="block">
-                  <span
-                    class="bg-white text-xs font-medium me-1 px-2 py-.5 rounded-full"
-                  >
-                  </span>
-                  <span class="font-thin text-xs">${
-                    repository.language || ""
-                  }</span>
-                </div>
-      `;
+// tsaka na to hahahaha tinatamad ako
+// fetch(`https://api.github.com/users/${userName}/repos`)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     const maxCharacter = 100;
+//     console.log(data);
 
-      repositoryContainer.appendChild(repoList);
-    });
-  })
-  .catch((error) => console.error("Error fetching repositories:", error));
+//     data.forEach((repository) => {
+//       const repoList = document.createElement("li");
+
+//       const language = repository.language || "";
+//       const languageColor = languageColors[language] || "#212830";
+
+//       repoList.className =
+//         "border border-slate-400 rounded-md p-3 list-none min-h-[150px] h-full";
+//       repoList.innerHTML = `
+//  <div class="inline-flex items-center">
+//           <svg
+//             xmlns="http://www.w3.org/2000/svg"
+//             width="24"
+//             height="24"
+//             viewBox="0 0 24 24"
+//             fill="none"
+//             stroke="currentColor"
+//             stroke-width="2"
+//             stroke-linecap="round"
+//             stroke-linejoin="round"
+//             class="lucide lucide-book-marked w-4 me-1"
+//           >
+//             <path d="M10 2v8l3-3 3 3V2" />
+//             <path
+//               d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+//             />
+//             <span class="text-sm font-medium text-blue-500"
+//             >
+//               ${repository.name}
+//             </span>
+//             <span
+//               class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+//             >
+//              ${repository.private ? "Private" : "Public"}
+//             </span>
+//           </svg>
+//         </div>
+//         <p class="block font-thin text-sm text-wrap my-2">
+//           ${
+//             truncateDescription(repository.description, maxCharacter) ||
+//             ""
+//           }
+//         </p>
+//         <div class="block">
+//           <span
+//             style="background-color: ${languageColor};"
+//             class="bg-white text-xs font-medium me-1 px-2 py-.5 rounded-full"
+//           >
+//           </span>
+//           <span class="font-thin text-xs">${language}</span>
+//         </div>
+//       `;
+
+//       repositoryContainer.appendChild(repoList);
+//     });
+//   })
+//   .catch((error) => console.error("Error fetching repositories:", error));
 
 function truncateDescription(text, maxLength) {
   return text && text.length > maxLength

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/images/download.ico" />
   </head>
-  <body class="bg-[#212830] w-full text-[#d1d7e0] font-[Inter] h-screen">
+  <body class="bg-[#212830] w-full text-[#d1d7e0] font-mono h-screen">
     <main class="w-[1200px] mx-auto">
       <div
         class="relative flex flex-col md:flex-row w-full items-center m-8 gap-2"
@@ -19,26 +19,33 @@
           >
             <img
               class="pfpimage w-[296px] h-[296px] object-cover object-center rounded-full"
-              src=""
+              src="./assets/images/aface.jpg"
               alt="profile"
             />
           </div>
           <div class="flex flex-col mt-5 gap-1">
             <div class="flex flex-col w-full max-w-[296px]">
-              <h1
-                class="nickname block font-bold text-2xl overflow-ellipsis"
-              ></h1>
+              <h1 class="nickname block font-bold text-2xl overflow-ellipsis">
+                senerity
+              </h1>
               <h5
                 class="username `block font-normal text-2xl overflow-ellipsis"
-              ></h5>
-              <p class="bio block font-thin text-[15px] text-wrap mt-2.5"></p>
+              >
+                Amanogawaa
+              </h5>
+              <p class="bio block font-thin text-[15px] text-wrap mt-2.5">
+                Hello, my name is Dominic, and I’m an aspiring sandwich
+                architect.
+              </p>
             </div>
             <div class="w-full my-5">
-              <button
-                class="cursor-pointer bg-[#2a313c] border border-[#6b6c6e] w-full rounded-md py-2 px-4 hover:opacity-85"
+              <a
+                href="./assets/Positions_and_Descriptions.pdf"
+                download="Positions_and_Descriptions.pdf"
+                class="cursor-pointer block text-center bg-[#2a313c] border border-[#6b6c6e] w-full rounded-md py-2 px-4 hover:opacity-85"
               >
                 Download Resume
-              </button>
+              </a>
             </div>
             <div class="flex flex-col w-full max-w-[296px]">
               <div class="inline-flex items-center font-light">
@@ -58,9 +65,9 @@
                   <circle cx="10" cy="8" r="5" />
                   <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
                 </svg>
-                <span class="followers text-base me-1"></span>
+                <span class="followers text-base me-1">8 followers</span>
                 &#x2022;
-                <span class="following text-base ms-1"></span>
+                <span class="following text-base ms-1">14 following </span>
               </div>
               <div class="inline-flex items-center font-light">
                 <svg
@@ -80,7 +87,7 @@
                   />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span class="location text-base"></span>
+                <span class="location text-base">Philippines</span>
               </div>
               <div class="inline-flex items-center font-light">
                 <svg
@@ -110,11 +117,25 @@
           class="w-[calc(100% - 296px - 16px)] w-full h-screen p-5 flex flex-col"
         >
           <code class="text-sm text-gray-200">Amanogawaa/README.md</code>
-          <div
-            class="border border-slate-400 w-full rounded-md h-40 mt-2.5 p-5"
-          >
+          <div class="border border-slate-400 w-full rounded-md mt-2.5 p-5">
             <h1 class="text-xl text-wrap font-semibold">About me</h1>
-            <h1 class="text-xl text-wrap font-semibold">Nothing much</h1>
+            <p class="text-base text-wrap font-normal font-mono">
+              Hello, my name is Dominic, and I’m an aspiring sandwich architect
+              from the fifth dimension of noodle-based reality. By day, I train
+              pet rocks to perform stand-up comedy in underwater theaters, and
+              by night, I decode secret messages sent by ancient toasters.
+            </p>
+            <p class="text-base text-wrap font-normal font-mono">
+              I have an unparalleled passion for counting the stars that don’t
+              exist, and my greatest achievement was teaching a cactus how to
+              sing opera in reverse. In my free time, I enjoy inventing
+              invisible objects and collecting rare air molecules from various
+              time zones.
+            </p>
+            <p class="text-base text-wrap font-normal font-mono">
+              One day, I hope to build the world’s first floating mountain made
+              entirely of alphabet soup.
+            </p>
           </div>
 
           <div
@@ -134,7 +155,7 @@
 
           <div class="flex w-full justify-between items-center mb-2">
             <h1 class="text-base font-medium">Pinned Repositories</h1>
-            <button
+            <!-- <button
               class="bg-[#347d39] hover:bg-[#338739] py-2 px-2.5 text-white rounded-md inline-flex items-center"
             >
               <svg
@@ -157,12 +178,177 @@
                 <path d="M7 13h3" />
               </svg>
               <span>All Repositories</span>
-            </button>
+            </button> -->
           </div>
           <div
             id="repository-container"
-            class="w-full grid grid-cols-2 grid-rows-2 gap-2.5"
-          ></div>
+            class="w-full grid grid-cols-2 grid-rows-2 gap-2.5 pb-10"
+          >
+            <div
+              class="border border-slate-400 rounded-md p-3 list-none min-h-[130px] h-full"
+              `
+            >
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    attendease
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap my-2">
+                student event registration system and attendance system
+              </p>
+              <div class="block">
+                <span
+                  class="bg-[#e34c26] text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div
+              class="border border-slate-400 rounded-md p-3 list-none min-h-[130px] h-full"
+              `
+            >
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    Lazappee
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap my-2">
+                e-commerce that doesnt make sense
+              </p>
+              <div class="block">
+                <span
+                  class="bg-[#e34c26] text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div
+              class="border border-slate-400 rounded-md p-3 list-none min-h-[130px] h-full"
+              `
+            >
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    GOOSESIBUCK
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap my-2"></p>
+              <div class="block">
+                <span
+                  class="bg-[#4F5D95] text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">HTML</span>
+              </div>
+            </div>
+            <div
+              class="border border-slate-400 rounded-md p-3 list-none min-h-[130px] h-full"
+              `
+            >
+              <div class="inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-book-marked w-4 me-1"
+                >
+                  <path d="M10 2v8l3-3 3 3V2" />
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+                  />
+                  <span class="text-sm font-medium text-blue-500">
+                    image_gallery
+                  </span>
+                  <span
+                    class="ms-1 text-sm px-2 py-.5 badge rounded-full bg-[#2a313c] border border-[#6b6c6e]"
+                  >
+                    Public
+                  </span>
+                </svg>
+              </div>
+              <p class="block font-thin text-sm text-wrap my-2"></p>
+              <div class="block">
+                <span
+                  class="bg-[#2b7489] text-xs font-medium me-1 px-2 py-.5 rounded-full"
+                >
+                </span>
+                <span class="font-thin text-xs">Typescript</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
